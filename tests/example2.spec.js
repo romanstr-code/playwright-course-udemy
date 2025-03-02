@@ -8,7 +8,8 @@ test('First test', async ({ page }) =>{
 });
 
 // Skips the test
-test.skip('Simple test click test', async ({ page }) => {
+test.skip('Simple test click test', async ({ page, browserName }) => {
+    test.skip(browserName= 'firefox', 'Working on the firefox fix');
     await page.goto("https://the-internet.herokuapp.com");
     await page.click("text=Add/Remove Elements");
     await page.click("text=Add Element");
