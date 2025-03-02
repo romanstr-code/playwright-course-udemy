@@ -7,13 +7,14 @@ test('First test', async ({ page }) =>{
     await expect(title).toHaveText('Playwright');
 });
 
-test('Simple test click test', async ({ page }) => {
+// Skips the test
+test.skip('Simple test click test', async ({ page }) => {
     await page.goto("https://the-internet.herokuapp.com");
     await page.click("text=Add/Remove Elements");
     await page.click("text=Add Element");
 });
 
-test.only('Duplicate test', async ({ page })=> {
+test('Duplicate test', async ({ page })=> {
     await page.goto("https://the-internet.herokuapp.com");
     await page.click("text=Add/Remove Elements");
     await page.click("text=Add Element");
