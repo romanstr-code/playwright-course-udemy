@@ -12,7 +12,6 @@ test.describe("Smoke Tests", () => {
 
     // Skips the test
     test('Simple test click test @regression', async ({ page, browserName }) => {
-        test.skip(browserName = 'firefox', 'Working on the firefox fix');
         await page.goto("https://the-internet.herokuapp.com");
         await page.click("text=Add/Remove Elements");
         await page.click("text=Add Element");
@@ -21,6 +20,7 @@ test.describe("Smoke Tests", () => {
     test('Duplicate test 1 @smoke', async ({ page }) => {
         await page.goto("https://the-internet.herokuapp.com");
         await page.click("text=Add/Remove Elements");
+        await page.screenshot({path: "screenshot1.png", fullPage: true});
         await page.click("text=Add Element");
     })
 
