@@ -7,7 +7,10 @@ const config = {
     retries: 1,
 
     // Set the global timeout for each test in milliseconds (60 seconds)
-    timeout: 60000,
+    timeout: 30000,
+
+    // Specifing the Reporter 
+    reporter: './reporter.js',
 
     // Define settings that apply to all test executions
     use: {
