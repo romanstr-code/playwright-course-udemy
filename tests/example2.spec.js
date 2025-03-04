@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 // Grouping the test
-test.describe("Smoke Tests", () => {
+test.describe.parallel("Smoke Tests", () => {
 
     // beforeEach Hook - travels to the specified page first
     test.beforeEach(async ({page})=>{
