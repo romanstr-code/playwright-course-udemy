@@ -14,13 +14,15 @@ test.describe("Smoke Tests", () => {
     test('Simple test click test @regression', async ({ page, browserName }) => {
         await page.goto("https://the-internet.herokuapp.com");
         await page.click("text=Add/Remove Elements");
+        const locator1 = page.locator("text=Add/Remove Elements");
+        // screenshot targets only the locator specified.
+        await locator1.screenshot({path:'screenshot2.png'});
         await page.click("text=Add Element");
     });
 
     test('Duplicate test 1 @smoke', async ({ page }) => {
         await page.goto("https://the-internet.herokuapp.com");
         await page.click("text=Add/Remove Elements");
-        await page.screenshot({path: "screenshot1.png", fullPage: true});
         await page.click("text=Add Element");
     })
 
