@@ -11,6 +11,7 @@ const config = {
 
     // Define settings that apply to all test executions
     use: {
+        baseURL: "https://the-internet.herokuapp.com/",
         // Run tests in headed mode (set to false to see the browser UI during tests)
         headless: false,
 
@@ -21,7 +22,7 @@ const config = {
         video: "off",
 
         // Disable automatic screenshot capture on test failure
-        screenshot: "on"
+        screenshot: "off"
     },
 
     // Define multiple projects to run tests in different browsers
