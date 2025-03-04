@@ -21,7 +21,7 @@ const config = {
         video: "off",
 
         // Disable automatic screenshot capture on test failure
-        screenshot: "off"
+        screenshot: "on"
     },
 
     // Define multiple projects to run tests in different browsers
